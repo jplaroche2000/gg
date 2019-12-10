@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="POC">
+
+		<class>com.telus.poc.coherence.model.Account</class>
+		<class>com.telus.poc.coherence.model.Address</class>
+		<class>com.telus.poc.coherence.model.AddressLink</class>
+		<class>com.telus.poc.coherence.model.Customer</class>
+		<class>com.telus.poc.coherence.model.Order</class>
+		<class>com.telus.poc.coherence.model.OrderItem</class>
+		<class>com.telus.poc.coherence.model.OrderItemKey</class>
+
+	</persistence-unit>
+</persistence>

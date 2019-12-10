@@ -1,0 +1,19 @@
+EXTRACT TEST
+
+-- SOURCEDEFS dirdef/table_def.sql
+
+getEnv (LD_LIBRARY_PATH)
+getEnv (PATH)
+getEnv (JAVA_HOME)
+SetEnv ( GGS_USEREXIT_CONF = "dirprm/hotcache_test.properties")
+
+-- CUSEREXIT ggjava_ue.dll CUSEREXIT INCLUDEUPDATEBEFORES, PASSTHRU
+CUSEREXIT libggjava_ue.so CUSEREXIT INCLUDEUPDATEBEFORES, PASSTHRU
+
+GetUpdateBefores
+
+NoTcpSourceTimer
+ 
+EOFDELAYCSECS 1 
+
+TABLE SCOTT.*;

@@ -1,0 +1,10 @@
+version: "3.2"
+services:
+  gg:
+    image: telus/gg:1.0
+    ports:
+      - "7901-7920:7901-7920"
+    volumes:
+      - /coherence-archive:/tmp/coherence-archive
+    environment:
+      COH_OPTS: "-Dcoherence.wka=tasks.coh_wka1"
